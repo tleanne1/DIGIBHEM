@@ -18,7 +18,7 @@
       <div class="row">
         <div class="col-6">Customer Name</div>
         <div class="col-6">
-          <form><input type="text" /> text</form>
+          <form><input type="text" /></form>
         </div>
       </div>
     </div>
@@ -26,7 +26,15 @@
       <div class="row">
         <div class="col-6">Check in Date</div>
         <div class="col-6">
-          <form><input type="text" /> date</form>
+          <form><input type="date" /></form>
+        </div>
+      </div>
+    </div>
+            <div class="customer-info">
+      <div class="row">
+        <div class="col-6">Check out Date</div>
+        <div class="col-6">
+          <form><input type="date" /></form>
         </div>
       </div>
     </div>
@@ -34,42 +42,57 @@
       <div class="row">
         <div class="col-6">Total No of Days</div>
         <div class="col-6">
-          <form><input type="text" /> number</form>
+          <form><input type="number" /></form>
         </div>
       </div>
     </div>
         <div class="customer-info">
       <div class="row">
-        <div class="col-6">Total No of Persons</div>
+        <div class="col-6">Travelers</div>
         <div class="col-6">
-          <form class="customer-input"><input type="text" /> number</form>
+          <form class="customer-input"><input type="number" /></form>
         </div>
       </div>
     </div>
         <div class="box">
       <h2>Select Room Type</h2>
     </div>
-            <div>
+            <div class="room-type">
       <div class="row">
-        <div class="col-6"><img src="#" alt="Deluxe Room"/>
+        <div class="col-6"><img src="images/deluxe.jpg" alt="Deluxe Room"/>
             <br/>
-            Deluxe Room</div>
+            <input type="checkbox" /> Deluxe Room</div>
         <div class="col-6">
-          <img src="#" alt="Suite Room"/>
+          <img src="images/suite.png" alt="Suite Room"/>
           <br/>
-          Suite Room
+          <input type="checkbox" /> Suite Room
         </div>
     </div>
     </div>
     <div class="box">
     <h2>Select Amenties</h2>
     </div>
-                <div>
+                <div class="room-type">
+      <div class="row">
+        <div class="col-6"><img src="images/ac.png" alt=""/>
+            <br/>
+            <input type="checkbox" /> A/C</div>
+        <div class="col-6">
+          <img src="images/locker.png" alt=""/>
+          <br/>
+          <input type="checkbox" /> Locker
+        </div>
+    </div>
+    </div>
+        <div class="box">
+    <h2>Advance Amount</h2>
+    </div>
+                <div class="advance-amount">
       <div class="row">
         <div class="col">
             <form>Advance Amount <input type="text" /></form></div>
     </div>
     </div>
-    <button>Register</button>
+    <button class="register mt-4 mb-4">Register</button>
   </body>
 </html>

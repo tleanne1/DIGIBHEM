@@ -1,19 +1,48 @@
-.header {
-  border: 1px solid #000000;
+body {
   text-align: center;
+}
+
+img {
+  width: 200px;
+  height: 180px;
+  padding: 5px;
+}
+
+.header {
+  padding: 10px;
 }
 
 .box {
   background-color: #000000;
   color: #ffffff;
-  text-align: center;
+  margin: 3px;
+  padding: 4px;
 }
 
 .customer-info {
-  margin-left: 15px;
+  margin-left: 300px;
   padding: 3px;
+  text-align: left;
 }
 
 .customer-input {
   margin-right: 15px;
+}
+
+.room-type {
+  margin: 15px;
+  display: inline-block;
+}
+
+.advance-amount {
+  padding: 15px;
+}
+
+button {
+  display: block;
+  margin: 0 auto;
+  background-color: #000000;
+  color: #ffffff;
+  padding: 5px 30px;
+  border-radius: 5px;
 }
