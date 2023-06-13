@@ -1,0 +1,19 @@
+.header {
+  border: 1px solid #000000;
+  text-align: center;
+}
+
+.box {
+  background-color: #000000;
+  color: #ffffff;
+  text-align: center;
+}
+
+.customer-info {
+  margin-left: 15px;
+  padding: 3px;
+}
+
+.customer-input {
+  margin-right: 15px;
+}
