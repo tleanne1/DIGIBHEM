@@ -7,92 +7,131 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
   </head>
   <link rel="stylesheet" href="style.css">
+      <link
+      href="https://fonts.googleapis.com/css2?family=Antonio:wght@100;200;300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
     <title>Document</title>
   </head>
   <body>
     <h1 class="header">Hotel Registration Form</h1>
     <div class="box">
-      <h2>Customer Info</h2>
+      <h2>Customer Information</h2>
     </div>
-    <div class="customer-info">
-      <div class="row">
-        <div class="col-6">Customer Name</div>
-        <div class="col-6">
-          <form><input type="text" /></form>
+    <section class="book">
+      <div class="container flex_space">
+        <div class="text">
+          <h2><span>Book</span> Your Rooms</h2>
+        </div>
+        <div class="form" id="register-form">
+    <form>
+      <div class="info">
+        <div class="row">
+          <div class="col">
+      <label for="person1Input">Customer Name</label>
+      <input id="person1Input" type="text" name="person1Input" />
+          </div>
+          </div>
+        <div class="row">
+          <div class="col">
+      <label for="person2Input">Check In Date</label>
+      <input id="person2Input" type="date" name="person2Input" />
+          </div>
+          </div>
+        <div class="row">
+          <div class="col">
+      <label for="animalInput">Check Out Date</label>
+      <input id="animalInput" type="date" name="animalInput" />
+          </div>
+          </div>
+        <div class="row">
+          <div class="col">
+      <label for="exclamationInput">Total No of Days</label>
+      <input id="exclamationInput" type="number" name="exclamationInput" />
+          </div>
+          </div>
+        <div class="row">
+          <div class="col">
+      <label for="verbInput">Total No of Persons</label>
+      <input id="verbInput" type="number" name="verbInput" />
+          </div>
+          </div>
         </div>
       </div>
-    </div>
-        <div class="customer-info">
-      <div class="row">
-        <div class="col-6">Check in Date</div>
-        <div class="col-6">
-          <form><input type="date" /></form>
         </div>
       </div>
-    </div>
-            <div class="customer-info">
-      <div class="row">
-        <div class="col-6">Check out Date</div>
-        <div class="col-6">
-          <form><input type="date" /></form>
-        </div>
-      </div>
-    </div>
-        <div class="customer-info">
-      <div class="row">
-        <div class="col-6">Total No of Days</div>
-        <div class="col-6">
-          <form><input type="number" /></form>
-        </div>
-      </div>
-    </div>
-        <div class="customer-info">
-      <div class="row">
-        <div class="col-6">Travelers</div>
-        <div class="col-6">
-          <form class="customer-input"><input type="number" /></form>
-        </div>
-      </div>
-    </div>
+    </section>
         <div class="box">
       <h2>Select Room Type</h2>
     </div>
-            <div class="room-type">
-      <div class="row">
-        <div class="col-6"><img src="images/deluxe.jpg" alt="Deluxe Room"/>
-            <br/>
-            <input type="checkbox" /> Deluxe Room</div>
-        <div class="col-6">
-          <img src="images/suite.png" alt="Suite Room"/>
+    <section class="room">
+    <div>
+        <div class="form">
+          <div class="grid">
+            <div><img src="images/deluxe.jpg" alt="Deluxe Room"/>
+              <br/>
+            <input type="checkbox" /> Deluxe Room
           <br/>
-          <input type="checkbox" /> Suite Room
+        $2,500</div>
+            <div><img src="images/suite.png" alt="Suite Room"/>
+              <br/>
+            <input type="checkbox" /> Suite Room
+          <br/>
+        $4,000</div>
+            </div>
         </div>
-    </div>
-    </div>
+    </section>
     <div class="box">
     <h2>Select Amenties</h2>
     </div>
-                <div class="room-type">
-      <div class="row">
-        <div class="col-6"><img src="images/ac.png" alt=""/>
-            <br/>
-            <input type="checkbox" /> A/C</div>
-        <div class="col-6">
-          <img src="images/locker.png" alt=""/>
+    <section class="amenties">
+    <div class="amenties-type">
+        <div class="form">
+          <div class="grid">
+            <div><img src="images/ac.png" alt="A/C"/>
+              <br/>
+            <input type="checkbox" /> A/C
           <br/>
-          <input type="checkbox" /> Locker
+        $1,000</div>
+            <div><img src="images/locker.png" alt="Locker"/>
+              <br/>
+            <input type="checkbox" /> Locker
+          <br/>
+        $300</div>
+            </div>
         </div>
-    </div>
-    </div>
+    </section>
         <div class="box">
     <h2>Advance Amount</h2>
     </div>
-                <div class="advance-amount">
-      <div class="row">
-        <div class="col">
-            <form>Advance Amount <input type="text" /></form></div>
+<section class="advance">
+        <div class="row">
+          <div class="col">
+      <label for="adjInput"><span>Advance</span> Amount</label>
+      <input id="adjInput" type="number" name="adjInput" />
+          </div>
+          </div>
+    </section>
+    <button type="submit" class="register">Register</button>
+    </form>
+<section class="results">
+    <div id="story" class="hidden">
+      <h2><span>Registration</span> Details</h2>
+      <p>
+        Customer Name: <span id="person1a">_________</span>
+        <br />
+        Check In Date: <span id="person2a">_________</span>
+        <br />
+        Check Out Date: <span id="animal">_________</span>
+        <br />
+        Total No of Days: <span id="exclamation">_________</span>
+        <br />
+        Total No of Persons: <span id="verb">_________</span>
+        <br />
+        Advance Amount: <span id="adj">_________</span>
+      </p>
     </div>
-    </div>
-    <button class="register mt-4 mb-4">Register</button>
+</section>
+<script src="app.js"></script>
   </body>
 </html>
