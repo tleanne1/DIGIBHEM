@@ -24,36 +24,35 @@
           <h2><span>Book</span> Your Rooms</h2>
         </div>
         <div class="form" id="register-form">
-    <form>
       <div class="info">
         <div class="row">
           <div class="col">
-      <label for="person1Input">Customer Name</label>
-      <input id="person1Input" type="text" name="person1Input" />
+      <label><b>Name:</b></label>
+      <input type="text" name="message" id="user_input" />
           </div>
           </div>
         <div class="row">
           <div class="col">
-      <label for="person2Input">Check In Date</label>
-      <input id="person2Input" type="date" name="person2Input" />
+      <label><b>Check In Date:</b></label>
+      <input type="date" name="message" id="user_input2" />
           </div>
           </div>
         <div class="row">
           <div class="col">
-      <label for="animalInput">Check Out Date</label>
-      <input id="animalInput" type="date" name="animalInput" />
+      <label><b>Check Out Date:</b></label>
+      <input type="date" name="message" id="user_input3" />
           </div>
           </div>
         <div class="row">
           <div class="col">
-      <label for="exclamationInput">Total No of Days</label>
-      <input id="exclamationInput" type="number" name="exclamationInput" />
+      <label><b>Total No of Days:</b></label>
+      <input type="number" name="message" id="user_input4" />
           </div>
           </div>
         <div class="row">
           <div class="col">
-      <label for="verbInput">Total No of Persons</label>
-      <input id="verbInput" type="number" name="verbInput" />
+      <label><b>Total No of People:</b></label>
+      <input type="number" name="message" id="user_input5" />
           </div>
           </div>
         </div>
@@ -65,41 +64,39 @@
       <h2>Select Room Type</h2>
     </div>
     <section class="room">
-    <div>
-        <div class="form">
-          <div class="grid">
-            <div><img src="images/deluxe.jpg" alt="Deluxe Room"/>
-              <br/>
-            <input type="checkbox" /> Deluxe Room
-          <br/>
-        $2,500</div>
-            <div><img src="images/suite.png" alt="Suite Room"/>
-              <br/>
-            <input type="checkbox" /> Suite Room
-          <br/>
-        $4,000</div>
-            </div>
+              <div class="text">
+          <h2><span>Room</span> Options</h2>
         </div>
+      <div class="grid">
+        <div>
+          <img src="images/deluxe.jpg" alt="Deluxe Room"/>
+          <input type="radio" name="room" value="Deluxe" /> Deluxe $2500
+
+    </div>
+    <div>
+      <img src="images/suite.png" alt="Suite Room"/>
+      <input type="radio" name="room" value="Suite" /> Suite $4000
+    </div>
+      </div>
     </section>
     <div class="box">
     <h2>Select Amenties</h2>
     </div>
     <section class="amenties">
-    <div class="amenties-type">
-        <div class="form">
-          <div class="grid">
-            <div><img src="images/ac.png" alt="A/C"/>
-              <br/>
-            <input type="checkbox" /> A/C
-          <br/>
-        $1,000</div>
-            <div><img src="images/locker.png" alt="Locker"/>
-              <br/>
-            <input type="checkbox" /> Locker
-          <br/>
-        $300</div>
-            </div>
+        <div class="text">
+          <h2><span>Amenties</span> Options</h2>
         </div>
+        <div class="grid">
+            <div>
+              <p><img src="images/ac.png" alt="A/C"/>
+              <input type="radio" name="amenties" value="A/C" /> A/C $1000
+        </div>
+            <div>
+              <img src="images/locker.png" alt="Locker"/>
+              <input type="radio" name="amenties" value="Locker" /> Locker $300
+        </div>
+            </div>
+          </p>
     </section>
         <div class="box">
     <h2>Advance Amount</h2>
@@ -107,29 +104,31 @@
 <section class="advance">
         <div class="row">
           <div class="col">
-      <label for="adjInput"><span>Advance</span> Amount</label>
-      <input id="adjInput" type="number" name="adjInput" />
+      <label>Advance Amount:</label>
+      <input type="number" name="message" id="user_input6" />
           </div>
           </div>
     </section>
-    <button type="submit" class="register">Register</button>
+    <button type="submit" class="register" onclick="displayRadioValue()">Register</button>
     </form>
 <section class="results">
     <div id="story" class="hidden">
       <h2><span>Registration</span> Details</h2>
-      <p>
-        Customer Name: <span id="person1a">_________</span>
-        <br />
-        Check In Date: <span id="person2a">_________</span>
-        <br />
-        Check Out Date: <span id="animal">_________</span>
-        <br />
-        Total No of Days: <span id="exclamation">_________</span>
-        <br />
-        Total No of Persons: <span id="verb">_________</span>
-        <br />
-        Advance Amount: <span id="adj">_________</span>
-      </p>
+    <div>
+      <span id="name"></span>
+      <br />
+      <span id="checkin"></span>
+      <br />
+      <span id="checkout"></span>
+      <br />
+      <span id="days"></span>
+      <br />
+      <span id="people"></span>
+      <br />
+      <span id="result"></span>
+      <br />
+      <span id="sex.result"></span>
+    </div>
     </div>
 </section>
 <script src="app.js"></script>
