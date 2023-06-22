@@ -1,29 +1,62 @@
 function displayRadioValue() {
-  document.getElementById("name").innerHTML =
-    "Customer Name: " + document.getElementById("user_input").value;
-  document.getElementById("checkin").innerHTML =
-    "Check In: " + document.getElementById("user_input2").value;
-  document.getElementById("checkout").innerHTML =
-    "Check Out: " + document.getElementById("user_input3").value;
-  document.getElementById("days").innerHTML =
-    "Total No of Days: " + document.getElementById("user_input4").value;
-  document.getElementById("people").innerHTML =
-    "Total No of People: " + document.getElementById("user_input5").value;
+  var deluxe = 2500;
+  var suite = 4000;
+  var a_c = 1000;
+  var locker = 300;
 
-  document.querySelector("div#story").removeAttribute("class");
+  var roomType = document.querySelector('input[name="room"]:checked').value;
+  var amentiesType = document.querySelector(
+    'input[name="amenties"]:checked'
+  ).value;
+  var checkIn = document.querySelector("#user_input2").value;
+  var checkOut = document.querySelector("#user_input3").value;
+  var totalDays = document.querySelector("#user_input4").value;
+  var totalPeople = document.querySelector("#user_input5").value;
+  var advance = document.querySelector("#user_input6").value;
 
-  var ele = document.getElementsByName("room");
-
-  for (i = 0; i < ele.length; i++) {
-    if (ele[i].checked)
-      document.getElementById("result").innerHTML = "Room: " + ele[i].value;
+  var roomCost;
+  if (roomType === "Deluxe") {
+    roomCost = deluxe;
+  } else if (roomType === "Suite") {
+    roomCost = suite;
   }
 
-  var ele = document.getElementsByName("amenties");
-
-  for (i = 0; i < ele.length; i++) {
-    if (ele[i].checked)
-      document.getElementById("sex.result").innerHTML =
-        "Amenties: " + ele[i].value;
+  var amentiesCost;
+  if (amentiesType === "A/C") {
+    amentiesCost = a_c;
+  } else if (amentiesType === "Locker") {
+    amentiesCost = locker;
   }
+
+  var total = roomCost + amentiesCost * totalDays;
+  var balance = total - advance;
+
+  document.querySelector("#story").innerHTML =
+    "Room Type: " +
+    roomType +
+    "<br>" +
+    "Amenties: " +
+    amentiesType +
+    "<br>" +
+    "Check In: " +
+    checkIn +
+    "<br>" +
+    "Check Out: " +
+    checkOut +
+    "<br>" +
+    "Total No of Days: " +
+    totalDays +
+    "<br>" +
+    "Total No of People: " +
+    totalPeople +
+    "<br>" +
+    "Advance Amount: $" +
+    advance +
+    "<br><br>" +
+    "Total: $" +
+    total +
+    "<br>" +
+    "Balance: $" +
+    balance;
+  document.querySelector("#story").classList.remove("hidden");
 }
