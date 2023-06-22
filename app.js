@@ -16,6 +16,7 @@ function displayRadioValue() {
   } else {
     amentiesType = "";
   }
+
   var checkIn = document.querySelector("#user_input2").value;
   var checkOut = document.querySelector("#user_input3").value;
   var totalDays = document.querySelector("#user_input4").value;
@@ -44,12 +45,11 @@ function displayRadioValue() {
   var total = roomCost + amentiesCost * totalDays + extraPeopleCost;
   var balance = total - advance;
 
+  let customerName = document.querySelector("#user_input").value;
+
   document.querySelector("#story").innerHTML =
-    "Room Type: " +
-    roomType +
-    "<br>" +
-    "Amenties: " +
-    amentiesType +
+    "Customer Name: " +
+    customerName +
     "<br>" +
     "Check In: " +
     checkIn +
@@ -62,6 +62,12 @@ function displayRadioValue() {
     "<br>" +
     "Total No of People: " +
     totalPeople +
+    "<br>" +
+    "Room Type: " +
+    roomType +
+    "<br>" +
+    "Amenties: " +
+    amentiesType +
     "<br>" +
     "Advance Amount: $" +
     advance +
