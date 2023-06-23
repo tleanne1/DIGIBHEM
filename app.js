@@ -10,11 +10,11 @@ function displayRadioValue() {
   } else {
     roomType = "";
   }
-  var amentiesType = document.querySelector('input[name="amenties"]:checked');
-  if (amentiesType != null) {
-    amentiesType = amentiesType.value;
+  var amenitiesType = document.querySelector('input[name="amenities"]:checked');
+  if (amenitiesType != null) {
+    amenitiesType = amenitiesType.value;
   } else {
-    amentiesType = "";
+    amenitiesType = "";
   }
 
   var checkIn = document.querySelector("#user_input2").value;
@@ -30,11 +30,11 @@ function displayRadioValue() {
     roomCost = suite;
   }
 
-  var amentiesCost;
-  if (amentiesType === "A/C") {
-    amentiesCost = a_c;
-  } else if (amentiesType === "Locker") {
-    amentiesCost = locker;
+  var amenitiesCost;
+  if (amenitiesType === "A/C") {
+    amenitiesCost = a_c;
+  } else if (amenitiesType === "Locker") {
+    amenitiesCost = locker;
   }
 
   var extraPeopleCost = 0;
@@ -42,7 +42,7 @@ function displayRadioValue() {
     extraPeopleCost = 1000 * (totalPeople - 2);
   }
 
-  var total = roomCost + amentiesCost * totalDays + extraPeopleCost;
+  var total = roomCost + amenitiesCost * totalDays + extraPeopleCost;
   var balance = total - advance;
 
   let customerName = document.querySelector("#user_input").value;
@@ -66,8 +66,8 @@ function displayRadioValue() {
     "Room Type: " +
     roomType +
     "<br>" +
-    "Amenties: " +
-    amentiesType +
+    "Amenities: " +
+    amenitiesType +
     "<br>" +
     "Advance Amount: $" +
     advance +
@@ -95,7 +95,7 @@ function displayRadioValue() {
     }
 
     cost += days * document.querySelector('input[name="room"]:checked').value;
-    cost += document.querySelector('input[name="amenties"]:checked').value;
+    cost += document.querySelector('input[name="amenities"]:checked').value;
     cost += document.getElementById("user_input6").value;
 
     document.getElementById("story").innerText = "Your total cost is: $" + cost;

@@ -75,7 +75,7 @@ h2 {
 /*-----room-----*/
 
 /*-----amenties-----*/
-.amenties .grid {
+.amenities .grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 20px;
@@ -83,7 +83,7 @@ h2 {
   padding: 30px 0;
 }
 
-.amenties h2 span {
+.amenities h2 span {
   color: #5585b5;
 }
 /*-----amenties-----*/
